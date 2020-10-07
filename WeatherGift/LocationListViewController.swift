@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LocationListViewController.swift
 //  WeatherGift
 //
 //  Created by Sangha Lee on 10/6/20.
