@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B30EE287252EE387007BF31A /* APIkeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30EE286252EE387007BF31A /* APIkeys.swift */; };
+		B32691CA25460276001A1326 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32691C925460276001A1326 /* AboutViewController.swift */; };
 		B35A85F32530C365004633CB /* WeatherDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35A85F22530C365004633CB /* WeatherDetail.swift */; };
 		B3639A0B2541D9C60004F89F /* HourlyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3639A0A2541D9C60004F89F /* HourlyCollectionViewCell.swift */; };
 		B3A2809925414DF10031D4B9 /* DailyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A2809825414DF10031D4B9 /* DailyTableViewCell.swift */; };
@@ -48,6 +49,7 @@
 		828578BA6FE2AE80D4BDC25D /* libPods-WeatherGift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeatherGift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8916B0FFEDCAF2B69C1AEE15 /* Pods-WeatherGift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherGift.release.xcconfig"; path = "Target Support Files/Pods-WeatherGift/Pods-WeatherGift.release.xcconfig"; sourceTree = "<group>"; };
 		B30EE286252EE387007BF31A /* APIkeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIkeys.swift; sourceTree = "<group>"; };
+		B32691C925460276001A1326 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		B35A85F22530C365004633CB /* WeatherDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetail.swift; sourceTree = "<group>"; };
 		B3639A0A2541D9C60004F89F /* HourlyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyCollectionViewCell.swift; sourceTree = "<group>"; };
 		B3A2809825414DF10031D4B9 /* DailyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTableViewCell.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				B3FA0C6C25300C3500C567A5 /* PageViewController.swift */,
 				B3FFB8C3252ED6B900F0B0DB /* LocationDetailViewController.swift */,
 				B3E04A32252D4F7F00916D0C /* LocationListViewController.swift */,
+				B32691C925460276001A1326 /* AboutViewController.swift */,
 				B3A2809825414DF10031D4B9 /* DailyTableViewCell.swift */,
 				B3639A0A2541D9C60004F89F /* HourlyCollectionViewCell.swift */,
 				B3F46EBB2544BADC00CA7815 /* UIViewController+alert.swift */,
@@ -356,6 +359,7 @@
 				B3FA0C6D25300C3500C567A5 /* PageViewController.swift in Sources */,
 				B3E04A33252D4F7F00916D0C /* LocationListViewController.swift in Sources */,
 				B3E04A62252D4FD500916D0C /* WeatherLocation.swift in Sources */,
+				B32691CA25460276001A1326 /* AboutViewController.swift in Sources */,
 				B3E04A2F252D4F7F00916D0C /* AppDelegate.swift in Sources */,
 				B3F46EBC2544BADC00CA7815 /* UIViewController+alert.swift in Sources */,
 				B3FFB8C4252ED6B900F0B0DB /* LocationDetailViewController.swift in Sources */,

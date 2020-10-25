@@ -81,9 +81,11 @@ class LocationDetailViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! LocationListViewController
-        let pageViewController = UIApplication.shared.windows.first!.rootViewController as! PageViewController
-        destination.weatherLocations = pageViewController.weatherLocations
+        if segue.identifier == "ShowList" {
+            let destination = segue.destination as! LocationListViewController
+            let pageViewController = UIApplication.shared.windows.first!.rootViewController as! PageViewController
+            destination.weatherLocations = pageViewController.weatherLocations
+        }
     }
     
     @IBAction func unwindFromLocationListViewController(segue: UIStoryboardSegue) {
@@ -95,7 +97,7 @@ class LocationDetailViewController: UIViewController {
         pageViewController.weatherLocations = source.weatherLocations
         pageViewController.setViewControllers([pageViewController.createLocationDetailViewController(forPage: locationIndex)], direction: .forward, animated: false, completion: nil)
     }
-
+    
     @IBAction func pageControlTapped(_ sender: UIPageControl) {
         let pageViewController = UIApplication.shared.windows.first!.rootViewController as! PageViewController
         var direction: UIPageViewController.NavigationDirection = .forward
@@ -156,12 +158,28 @@ extension LocationDetailViewController: CLLocationManagerDelegate {
         case .restricted:
             self.oneButtonAlert(title: "Location services denied", message: "")
         case .denied:
-            break
+            showAlertToPrivacySettings(title: "User has not authorized location services", message: "Select Settings below")
         case .authorizedAlways, .authorizedWhenInUse:
             locationManager.requestLocation()
         @unknown default:
             print("ERROR")
         }
+    }
+    
+    func showAlertToPrivacySettings(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else{
+            print("ERROR")
+            return
+        }
+        let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) in
+            UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(settingsAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

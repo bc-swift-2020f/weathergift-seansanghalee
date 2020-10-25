@@ -36,7 +36,7 @@ class PageViewController: UIPageViewController {
         }
         
         if weatherLocations.isEmpty {
-            weatherLocations.append(WeatherLocation(name: "NOVA Brighton", latitude: 42.347089, longitude: -71.141357))
+            weatherLocations.append(WeatherLocation(name: "", latitude: 42.347089, longitude: -71.141357))
         }
     }
     
